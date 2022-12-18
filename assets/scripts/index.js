@@ -13,7 +13,7 @@ const formElement = document.querySelector('.form');
     fetch("https://httpbin.org/post", 
     {
     method: "POST",
-    body: new FormData(form),
+    body: new FormData(formElement),
     headers: {
       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
     },
@@ -23,7 +23,7 @@ const formElement = document.querySelector('.form');
       console.log(user);
     })
     .catch((error) => console.log(error));
-  console.log(form);
+  console.log(formElement);
     }
 	});
 
